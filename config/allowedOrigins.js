@@ -1,7 +1,3 @@
-const allowedOrigins = [
-  "http://localhost:3000",
-  "http://localhost:5173",
-  "https://geonx-gis-app.vercel.app",
-];
+const allowedOrigins = [process.env.FRONTEND_LOCAL, process.env.FRONTEND_PROD];
 
 module.exports = allowedOrigins;
