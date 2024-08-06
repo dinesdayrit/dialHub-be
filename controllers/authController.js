@@ -84,7 +84,11 @@ const refresh = (req, res) => {
         { expiresIn: "15m" }
       );
 
-      res.json({ accessToken });
+      res.json({
+        id: foundUser.id,
+        username: foundUser.username,
+        roles: foundUser.roles,
+      });
     }
   );
 };
