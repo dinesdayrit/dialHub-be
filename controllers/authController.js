@@ -85,9 +85,12 @@ const refresh = (req, res) => {
       );
 
       res.json({
-        id: foundUser.id,
-        username: foundUser.username,
-        roles: foundUser.roles,
+        accessToken,
+        user: {
+          id: foundUser.id,
+          username: foundUser.username,
+          roles: foundUser.roles,
+        },
       });
     }
   );
